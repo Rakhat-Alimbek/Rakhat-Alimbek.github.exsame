@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Философы Ренессанса</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/main.js" defer></script>
+  
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+            <ul class="dropdown-menu">
+              <li><a href="art.html">Художники Ренессанса</a></li>
+              <li><a href="Russion.html">Русские художники</a></li>
+            </ul>
+          </li>
+          <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+          <li><a href="philosophers.html"><i class="fas fa-feather"></i> Философы</a></li>
+          <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+            <ul class="dropdown-menu">
+              <li><a href="Scylpture.html">Скульптуры</a></li>
+              <li><a href="science.html">Антология</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider round"></span>
+    </label>
+    
+  </header>
+
+  <main class="main-content">
+    <a href="index.html">Главная</a> → <a href="philosophers.html">Философы</a>
+    <section class="hero animate-on-scroll">
+      <h1>Философы эпохи Ренессанса</h1>
+      <div class="nav-buttons">
+        <input type="text" id="search-input" placeholder="Поиск философа">
+        <button class="search-btn">Поиск</button>
+        <button class="start-btn" onclick="resetSearch()">Сбросить</button>
+      </div>
+      <p class="philo-description">
+        Философия Возрождения — направление в европейской философии XV—XVI веков. Характеризуется неприятием официальной католической религиозности и интересом к человеческой личности. Внутри течения гуманистов этот интерес выразился в идеях классического гуманизма и способствовал утверждению практического критерия истины (опыт + польза), который лёг в основу методологии современных естественных наук.
+      </p>
+
+      <ul class="philosophers-list" id="philosophers-list">
+        <li><a href="ficino.html">Марсилио Фичино (1433–1499)</a></li>
+        <li><a href="petrarca.html">Франческо Петрарка (1304–1374)</a></li>
+        <li><a href="salutati.html">Колюччо Салютати (1331–1406)</a></li>
+        <li><a href="gempist.html">Георгий Гемист (ок.1360–1452)</a></li>
+        <li><a href="bruni.html">Леонардо Бруни (1370/1374–1444)</a></li>
+        <li><a href="baraglioni.html">Пьетро Баральони (1380–1459)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Проект о Ренессансе</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Анимация с IntersectionObserver
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+
+      // Поиск по списку философов
+      const searchInput = document.getElementById('search-input');
+      const philosophersList = document.getElementById('philosophers-list');
+      const philosophersItems = philosophersList.getElementsByTagName('li');
+      const searchButton = document.querySelector('.nav-buttons .search-btn');
+
+      if (searchInput && philosophersList && searchButton) {
+        searchButton.addEventListener('click', filterPhilosophers);
+        searchInput.addEventListener('input', filterPhilosophers);
+
+        function filterPhilosophers() {
+          const searchTerm = searchInput.value.toLowerCase();
+          Array.from(philosophersItems).forEach(item => {
+            const philosopherName = item.textContent.toLowerCase();
+            if (philosopherName.includes(searchTerm)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        }
+
+        window.resetSearch = function() {
+          searchInput.value = '';
+          Array.from(philosophersItems).forEach(item => {
+            item.style.display = 'block';
+          });
+        };
+      } else {
+        console.error('Не удалось найти элементы для поиска: search-input или philosophers-list');
+      }
+    });
+  </script>
+</body>
+</html>

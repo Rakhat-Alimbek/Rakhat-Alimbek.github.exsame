@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тайная вечеря — Леонардо да Винчи</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+            <ul class="dropdown-menu">
+              <li><a href="art.html">Художники Ренессанса</a></li>
+              <li><a href="Russion.html">Русские художники</a></li>
+            </ul>
+          </li>
+          <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+          <li><a href="philosophers.html"><i class="fas fa-feather"></i> Философы</a></li>
+          <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+            <ul class="dropdown-menu">
+              <li><a href="Scylpture.html">Скульптуры</a></li>
+              <li><a href="science.html">Антология</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider round"></span>
+  </label>
+</header>
+
+<main class="main-content">
+<a href="index.html">Главная</a> → Тайная вечеря
+  <h1>Тайная вечеря</h1>
+  <p><strong>Автор:</strong> Леонардо да Винчи</p>
+
+<div class="work-container">
+  <div class="work-details">
+    <img src="gallery/gallery1.jpg" alt="Тайная вечеря" class="float-image special-image" onclick="expandImage(this)">
+
+    <p><strong>«Тайная вечеря»</strong> — фреска, созданная Леонардо да Винчи в 1495–1498 годах. Она изображает момент, когда Иисус сообщает своим ученикам, что один из них предаст его.</p>
+
+    <p>Произведение находится в монастыре Санта-Мария-делле-Грацие в Милане. Оно поражает не только композицией, но и глубиной психологической проработки персонажей. Каждый апостол изображён с уникальной реакцией на слова Христа.</p>
+
+    <p>Работа отличается новаторским подходом к перспективе и эмоциям, а также драматической постановкой сцены, что делает её шедевром Возрождения.</p>
+  </main>
+
+<footer class="footer">
+  <p>&copy; 2025 Проект о Ренессансе</p>
+</footer>
+
+<div id="expandedImgContainer" onclick="closeImage()">
+  <div class="expanded-img-content">
+    <img id="expandedImg" src="" alt="М">
+    <div class="expanded-text">
+      <h2 id="artTitle"></h2>
+      <p id="artDetails"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мона Лиза — Леонардо да Винчи</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+            <ul class="dropdown-menu">
+              <li><a href="art.html">Художники Ренессанса</a></li>
+              <li><a href="Russion.html">Русские художники</a></li>
+            </ul>
+          </li>
+          <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+          <li><a href="philosophers.html"><i class="fas fa-feather"></i> Философы</a></li>
+          <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+            <ul class="dropdown-menu">
+              <li><a href="Scylpture.html">Скульптуры</a></li>
+              <li><a href="science.html">Антология</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+  </nav>
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider round"></span>
+  </label>
+</header>
+
+<main class="main-content">
+<a href="index.html">Главная</a> → Монна Лиза
+  <h1>Мона Лиза</h1>
+  <p><strong>Автор:</strong> Леонардо да Винчи</p>
+
+  <div class="artwork-box">
+    <div class="artwork-description">
+      <img src="gallery/gallery3.jpg" alt="Мона Лиза" class="float-image" onclick="expandImage(this)">
+
+      <p><strong>«Мона Лиза»</strong> — одна из самых известных картин в истории искусства. Она написана Леонардо да Винчи в начале XVI века и изображает загадочную женщину с едва заметной улыбкой. Картина восхищает своей тонкой проработкой деталей, мягкими переходами света и теней, а также уникальной атмосферой покоя и загадки.</p>
+
+      <p>Многие исследователи считают, что моделью для портрета стала Лиза дель Джокондо, жена флорентийского торговца. Однако это до сих пор остаётся предметом дискуссий. Картина хранится в Лувре (Париж) и ежедневно привлекает тысячи посетителей.</p>
+
+      <p>Одна из главных особенностей «Моны Лизы» — техника сфумато, которую Леонардо использовал для создания мягких переходов между цветами и тенями. Это придаёт портрету реалистичность и глубину, а также усиливает ощущение загадочности.</p>
+
+      <p>Интересно, что взгляд Моны Лизы словно следует за зрителем, где бы он ни находился. Это эффект достигается благодаря мастерскому использованию перспективы и света. Также примечателен пейзаж на заднем плане — он символичен и добавляет дополнительный уровень интерпретации произведения.</p>
+
+      <p>Картина неоднократно становилась объектом культурных отсылок, пародий и исследований. Она является иконой мирового искусства и символом гения Леонардо да Винчи. В XX веке «Мона Лиза» даже была похищена из Лувра, но была возвращена спустя два года.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Проект о Ренессансе</p>
+  </footer>
+
+<div id="expandedImgContainer" onclick="closeImage()">
+  <div class="expanded-img-content">
+    <img id="expandedImg" src="" alt="М">
+    <div class="expanded-text">
+      <h2 id="artTitle"></h2>
+      <p id="artDetails"></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

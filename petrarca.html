@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Франческо Петрарка — Философ Ренессанса</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/main.js" defer></script>
+  
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+            <ul class="dropdown-menu">
+              <li><a href="art.html">Художники Ренессанса</a></li>
+              <li><a href="Russion.html">Русские художники</a></li>
+            </ul>
+          </li>
+          <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+          <li><a href="philosophers.html"><i class="fas fa-feather"></i> Философы</a></li>
+          <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+            <ul class="dropdown-menu">
+              <li><a href="Scylpture.html">Скульптуры</a></li>
+              <li><a href="science.html">Антология</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider round"></span>
+    </label>
+  
+  </header>
+
+  <main class="main-content">
+    <a href="index.html">Главная</a> → <a href="philosophers.html">Философы</a> → Франческо Петрарка
+    <h1>Франческо Петрарка</h1>
+    <p><strong>Итальянский поэт, родоначальник европейского гуманизма.</strong></p>
+
+    <div class="world-box">
+      <div class="world-description">
+        <img src="gallery/6599.jpg" alt="Франческо Петрарка" class="Root-image" onclick="expandImage(this)">
+
+        <p><strong>Франческо Петрарка (1304 - 1374)</strong> — Наибольшую популярность Петрарке принесла любовная лирика. Его сонеты на итальянском языке, полные любви и нежности, покорили читателей во всём мире.</p>
+        <p>Все они были посвящены Лауре, которую поэт повстречал в авиньонской церкви. Помимо любовной лирики, широкую известность Петрарке принесла поэма «Триумфы», в которой отразилась жизненная философия автора.</p>
+        <p>Одним из главных достижений Фичино стало его переводческое наследие. Он перевёл на латынь все диалоги Платона, а также труды неоплатоников, таких как Плотин, Порфирий и Ямвлих. Эти переводы сделали античные тексты доступными европейским учёным и способствовали распространению гуманистических идей. Фичино также перевёл сочинения, приписываемые Гермесу Трисмегисту, которые считались источником древней мудрости и оказали влияние на развитие эзотерической традиции.</p>
+        <p>Франческо Петрарка писал не только на итальянском языке, но и на латыни. На этом древнем языке им было написано немало серьёзных произведений, среди которых автобиографии, инвективы (гневные обличительные речи), критические статьи.</p>
+        <p>Ещё при жизни произведения Петрарки были оценены по достоинству, и в 1341 году в Риме он был венчан лавровым венком — наивысшей наградой для поэта.</p>
+        <p>В 1327 году Петрарка посетил мессу в Авиньоне и впервые увидел Лауру де Новес. Эта женщина станет единственной музой и вдохновителем Петрарки. Благодаря ей он создаст сонеты, которые войдут в историю литературы как лучшие образчики жанра. В 1341 году Петрарка был коронован лавровым венцом как поэт-лауреат Рима. В годы после своей коронации Петрарка путешествовал по Франции, Германии и Испании, занимая различные церковные должности, исследуя сочинения Цицерона и изучая греческую историю и литературу.</p>
+        <p>Последние годы жизни Петрарка провёл при дворе Франческо I да Каррара, жил в Падуе, иногда предпочитал проводить время в небольшой деревеньке Аркуа. Здесь он и умер в ночь с 18 на 19 июля 1374 года.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Проект о Ренессансе</p>
+  </footer>
+
+  <div id="expandedImgContainer" onclick="closeImage()">
+    <div class="expanded-img-content">
+      <img id="expandedImg" src="" alt="">
+      <div class="expanded-text">
+        <h2 id="artTitle"></h2>
+        <p id="artDetails"></p>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

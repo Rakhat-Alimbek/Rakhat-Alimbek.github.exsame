@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Леонардо Бруни — Философ Ренессанса</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+            <ul class="dropdown-menu">
+              <li><a href="art.html">Художники Ренессанса</a></li>
+              <li><a href="Russion.html">Русские художники</a></li>
+            </ul>
+          </li>
+          <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+          <li><a href="philosophers.html"><i class="fas fa-feather"></i> Философы</a></li>
+          <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+            <ul class="dropdown-menu">
+              <li><a href="Scylpture.html">Скульптуры</a></li>
+              <li><a href="science.html">Антология</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider round"></span>
+    </label>
+  </header>
+
+  <div class="breadcrumb">
+  </div>
+
+  <main class="main-content">
+    <a href="index.html">Главная</a> → <a href="philosophers.html">Философы</a> → Леонардо Бруни
+
+    <h1>Леонардо Бруни</h1>
+    <p><strong>Итальянский гуманист, историк и канцлер Флоренции</strong></p>
+
+    <div class="artwork-box">
+      <div class="artwork-description">
+        <img src="gallery/Leonard_Bruni.jpg" alt="Леонардо Бруни" class="float-image" onclick="expandImage(this)">
+
+        <p><strong>Леонардо Бруни (1370/1374 – 1444)</strong> — итальянский гуманист, историк и канцлер Флоренции, один из ведущих представителей раннего гуманизма. Родился в Ареццо в 1370 или 1374 году, он получил образование во Флоренции под руководством Колюччо Салютати.</p>
+        <p>Бруни был известен своими переводами античных текстов, включая произведения Платона и Аристотеля, которые он переводил с греческого на латынь. Его переводы способствовали распространению античной мысли в Европе.</p>
+        <p>Как историк, Бруни написал «Историю флорентийского народа» (Historiae Florentini Populi), где впервые применил гуманистический подход к историографии, подчёркивая роль гражданской свободы и республиканских идеалов.</p>
+        <p>Бруни также был активным сторонником гражданского гуманизма, утверждая, что участие в общественной жизни является высшей формой человеческой добродетели. Его идеи оказали влияние на политическую мысль Ренессанса.</p>
+        <p>Умер Бруни 9 марта 1444 года во Флоренции, оставив после себя наследие, которое укрепило гуманистические традиции и заложило основы для дальнейшего развития исторической науки.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Проект о Ренессансе</p>
+  </footer>
+
+  <div id="expandedImgContainer" onclick="closeImage()">
+    <div class="expanded-img-content">
+      <img id="expandedImg" src="" alt="">
+      <div class="expanded-text">
+        <h2 id="artTitle"></h2>
+        <p id="artDetails"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

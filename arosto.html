@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Людовико Ариосто</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+            <ul class="dropdown-menu">
+              <li><a href="art.html">Искусство Ренессанса</a></li>
+              <li><a href="Russion.html">Русские художники</a></li>
+            </ul>
+          </li>
+          <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+          <li><a href="philosophers.html"><i class="fas fa-feather"></i> Философы</a></li>
+          <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+            <ul class="dropdown-menu">
+              <li><a href="Scylpture.html">Скульптуры</a></li>
+              <li><a href="science.html">Антология</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider round"></span>
+    </label>
+  </header>
+
+  <main class="main-content">
+    <a href="index.html">Главная</a> → <a href="poets.html">Поэты</a> → Людовико Ариосто
+    <h1>Людовико Ариосто</h1>
+    <p><strong>Итальянский поэт, автор эпической поэмы «Неистовый Роланд».</strong></p>
+
+    <div class="artwork-box">
+      <div class="artwork-description">
+        <img src="gallery/08dd5.jpg" alt="Людовико Ариосто" class="float-image" onclick="expandImage(this)" />
+
+        <p><strong>Людовико Ариосто (1474 – 1533)</strong> — итальянский поэт эпохи Высокого Ренессанса, наиболее известный своей эпической поэмой «Неистовый Роланд» (Orlando Furioso). Это произведение, написанное в жанре рыцарского романа, стало одним из шедевров итальянской литературы.</p>
+        <p>Ариосто сочетал в своих работах элементы фантазии, романтики и юмора, создавая яркие образы, которые вдохновляли многих писателей и художников.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Проект о Ренессансе</p>
+  </footer>
+
+  <div id="expandedImgContainer" onclick="closeImage()">
+    <div class="expanded-img-content">
+      <img id="expandedImg" src="" alt="" />
+      <div class="expanded-text">
+        <h2 id="artTitle"></h2>
+        <p id="artDetails"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

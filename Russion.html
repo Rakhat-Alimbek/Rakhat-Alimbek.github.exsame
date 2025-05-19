@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Русские художники</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+          <ul class="dropdown-menu">
+            <li><a href="art.html">Искусство Ренессанса</a></li>
+            <li><a href="Russion.html">Русские художники</a></li>
+          </ul>
+        </li>
+        <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+        <li><a href="philosophers.html"><i class="fas fa-book"></i> Философы</a></li>
+        <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+          <ul class="dropdown-menu">
+            <li><a href="Scylpture.html">Скульптуры</a></li>
+            <li><a href="science.html">Антология</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+        
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <nav class="breadcrumbs animate-on-scroll">
+      <a href="index.html">Главная</a> → <span>Русские художники</span>
+    </nav>
+
+    <section class="artists-list">
+      <h2>Художники XIV века</h2>
+      <ul>
+        <li><a href="isaakiy.html">Исаакий (иконописец)</a>
+          <p>Деятель XIV века, известный как один из ранних русских иконописцев. Работал в Новгороде, участвовал в росписи храмов.</p>
+        </li>
+        <li><a href="feofan.html">Феофан Грек</a>
+          <p>Годы жизни: ок. 1340 – после 1405. Один из крупнейших византийских иконописцев, повлиявший на русскую живопись XIV–XV веков. Работал в Новгороде и Москве.</p>
+        </li>
+      </ul>
+
+      <h2>Художники XV века</h2>
+      <ul>
+        <li><a href="rublev.html">Андрей Рублёв</a>
+          <p>Годы жизни: ок. 1360 – 17 октября 1428. Выдающийся иконописец Древней Руси, автор иконы «Троица». Канонизирован в 1988 году.</p>
+        </li>
+        <li><a href="amvrosiy.html">Амвросий</a>
+          <p>XV век. Мастер резьбы и ювелирного искусства, создавал церковную утварь.</p>
+        </li>
+        <li><a href="dionisiy.html">Дионисий</a>
+          <p>Годы жизни: ок. 1440 – ок. 1502. Русский иконописец, продолжатель традиций Рублёва. Известен росписями Ферапонтова монастыря.</p>
+        </li>
+      </ul>
+
+      <h2>Художники XVII века</h2>
+      <ul>
+        <li><a href="vladimirov.html">Иосиф Владимиров</a>
+          <p>XVII век. Иконописец, выполнял заказы для царского двора, включая росписи в Кремле.</p>
+        </li>
+      </ul>
+
+      <h2>Художники XIX века</h2>
+      <ul>
+        <li><a href="ayvazovsky.html">Иван Айвазовский</a>
+          <p>Годы жизни: 29 июля 1817 – 2 мая 1900. Великий русский художник, мастер морских пейзажей.</p>
+        </li>
+        <li><a href="repin.html">Илья Репин</a>
+          <p>Годы жизни: 5 августа 1844 – 29 сентября 1930. Мастер портрета и исторической живописи, представитель реализма.</p>
+        </li>
+        <li><a href="surikov.html">Василий Суриков</a>
+          <p>Годы жизни: 24 января 1848 – 19 марта 1916. Ведущий русский исторический живописец.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Проект о Ренессансе</p>
+  </footer>
+
+  <script>
+    // Переключение видимости информации об художнике
+    function toggleArtist(artistId) {
+      const artistInfo = document.getElementById(artistId);
+      if (!artistInfo) return;
+
+      const isHidden = artistInfo.style.display === "none" || artistInfo.style.display === "";
+      artistInfo.style.display = isHidden ? "block" : "none";
+    }
+
+    // Инициализация: скрыть все блоки информации при загрузке
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".artist-info").forEach((info) => {
+        info.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>

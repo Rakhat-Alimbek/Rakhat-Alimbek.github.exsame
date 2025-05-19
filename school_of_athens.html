@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Школа Афин — Рафаэль</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+            <ul class="dropdown-menu">
+              <li><a href="art.html">Художники Ренессанса</a></li>
+              <li><a href="Russion.html">Русские художники</a></li>
+            </ul>
+          </li>
+          <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+          <li><a href="philosophers.html"><i class="fas fa-feather"></i> Философы</a></li>
+          <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+            <ul class="dropdown-menu">
+              <li><a href="Scylpture.html">Скульптуры</a></li>
+              <li><a href="science.html">Антология</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+  </nav>
+  </div>
+</nav>
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider round"></span>
+  </label>
+</header>
+
+<main class="main-content">
+  <a href="index.html">Главная</a> → Школа Афин
+  <h1>Школа Афин</h1>
+  <p><strong>Автор:</strong> Рафаэль Санти</p>
+
+  <div class="tork-box">
+  <div class="tork-description">
+  <img src="gallery/gallery2.jpg" alt="Школа Афин" class="image-large" onclick="expandImage(this)">
+
+  <p><strong>«Школа Афин»</strong> — фреска Рафаэля, созданная около 1510 года для Апостольского дворца в Ватикане. Она представляет собой аллегорическое изображение философии.</p>
+
+  <p>В центре композиции — Платон и Аристотель, окружённые другими выдающимися мыслителями древности, такими как Сократ, Пифагор и Диоген. Каждый персонаж проработан с точностью и выразительностью.</p>
+
+  <p>Фреска восхищает архитектурной перспективой и символикой, а также высоким художественным мастерством. Она считается одним из важнейших произведений итальянского Возрождения.</p>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 Проект о Ренессансе</p>
+</footer>
+
+<div id="expandedImgContainer" onclick="closeImage()">
+  <div class="expanded-img-content">
+    <img id="expandedImg" src="" alt="М">
+    <div class="expanded-text">
+      <h2 id="artTitle"></h2>
+      <p id="artDetails"></p>
+    </div>
+</body>
+</html>

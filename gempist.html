@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Георгий Гемист — Философ Ренессанса</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+            <ul class="dropdown-menu">
+              <li><a href="art.html">Художники Ренессанса</a></li>
+              <li><a href="Russion.html">Русские художники</a></li>
+            </ul>
+          </li>
+          <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+          <li><a href="philosophers.html"><i class="fas fa-feather"></i> Философы</a></li>
+          <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+            <ul class="dropdown-menu">
+              <li><a href="Scylpture.html">Скульптуры</a></li>
+              <li><a href="science.html">Антология</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider round"></span>
+    </label>
+  </header>
+
+  <div class="breadcrumb">
+  </div>
+
+  <main class="main-content">
+    <a href="index.html">Главная</a> → <a href="philosophers.html">Философы</a> → Георгий Гемист
+
+    <h1>Георгий Гемист</h1>
+    <p><strong>Византийский философ и неоплатоник, известный как Плифон</strong></p>
+
+    <div class="artwork-box">
+      <div class="artwork-description">
+        <img src="gallery/maxr.jpg" alt="Георгий Гемист" class="float-image" onclick="expandImage(this)">
+
+        <p><strong>Георгий Гемист (ок. 1360 – 1452)</strong> — византийский философ, неоплатоник и гуманист, более известный как Плифон. Родился около 1360 года в Константинополе, он стал одним из последних великих мыслителей Византийской империи.</p>
+        <p>Гемист был ярым сторонником платонизма, отвергая аристотелевскую традицию, господствовавшую в средневековой схоластике. Он стремился возродить античную религию и философию, предлагая радикальные идеи, такие как возвращение к язычеству, что вызывало споры среди его современников.</p>
+        <p>В 1438–1439 годах Гемист участвовал во Флорентийском соборе, где его лекции о Платоне вдохновили итальянских гуманистов, включая Козимо де Медичи, на создание Платоновской академии. Его главные труды, такие как «Законы» (Nomoi), содержат утопические идеи о реформировании общества.</p>
+        <p>Гемист также внёс вклад в изучение античных текстов, передав свои знания итальянским учёным. Его идеи оказали влияние на развитие неоплатонизма в Европе, в частности на Марсилио Фичино.</p>
+        <p>Умер Гемист в 1452 году в Мистре, оставив после себя наследие, которое способствовало интеллектуальному обмену между Византией и Западной Европой.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Проект о Ренессансе</p>
+  </footer>
+
+  <div id="expandedImgContainer" onclick="closeImage()">
+    <div class="expanded-img-content">
+      <img id="expandedImg" src="" alt="">
+      <div class="expanded-text">
+        <h2 id="artTitle"></h2>
+        <p id="artDetails"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

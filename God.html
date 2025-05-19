@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Антология обучения Богоматери</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <script src="js/main.js" defer></script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+            <ul class="dropdown-menu">
+              <li><a href="art.html">Искусство Ренессанса</a></li>
+              <li><a href="Russion.html">Русские художники</a></li>
+            </ul>
+          </li>
+          <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+          <li><a href="philosophers.html"><i class="fas fa-feather"></i> Философы</a></li>
+          <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+          <li class="dropdown">
+            <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+            <ul class="dropdown-menu">
+              <li><a href="Scylpture.html">Скульптуры</a></li>
+              <li><a href="science.html">Антология</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider round"></span>
+    </label>
+  </header>
+
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Поиск по сайту">
+      <button type="submit">НАЙТИ</button>
+    </form>
+  </div>
+
+  <main class="main-content">
+<a href="index.html">Главная</a> → <a href="science.html">Антология</a> → <a href="God.html">Описание Богаматери</a>
+    <div class="chapters animate-on-scroll">
+      <h1>АНТОЛОГИЯ ОБУЧЕНИЯ БОГОМАТЕРИ</h1>
+      <p>Иконографический сюжет "Обучение Богоматери" представляет собой изображение Девы Марии в детстве, когда её обучают чтению, письму или священным текстам.</p>
+
+      <h2>Описание сюжета</h2>
+      <p>Тема "Обучения Богоматери" берёт начало из апокрифических текстов, таких как Протоевангелие Иакова, где описывается детство Девы Марии. Согласно преданию, юная Мария проводила время в храме, где её наставляли священники, или дома, где её мать, святая Анна, учила её основам духовной мудрости.</p>
+      <p>Символика этого сюжета подчёркивает божественную подготовку Марии к её будущей роли как Матери Христа. Византийское и русское искусство часто изображают её с книгой или свитком, окружённой светом или ангельскими фигурами, что подчёркивает её святость и чистоту. В итальянском Ренессансе этот сюжет обрёл более реалистичные черты, с акцентом на перспективу и эмоциональную выразительность.</p>
+    </div>
+  </main>
+
+<footer class="footer">
+    <p>© 2025 Проект о Ренессансе</p>
+  </footer>
+  
+  <div id="expandedImgContainer" class="modal" onclick="closeImage()">
+    <div class="modal-content">
+      <img id="expandedImg" alt="">
+      <div class="image-description" id="imageDescription">
+        <h3 id="artTitle"></h3>
+        <p id="artDetails"></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

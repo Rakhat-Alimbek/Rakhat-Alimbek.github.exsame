@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Эпоха Ренессанса</title>
+  <link id="theme-link" rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="js/chart.js" defer></script>
+  <script src="js/main.js" defer></script>
+  
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-paint-brush"></i> Художество</a>
+          <ul class="dropdown-menu">
+            <li><a href="art.html">Искусство Ренессанса</a></li>
+            <li><a href="Russion.html">Русские художники</a></li>
+          </ul>
+        </li>
+        <li><a href="poets.html"><i class="fas fa-feather"></i> Поэты</a></li>
+        <li><a href="philosophers.html"><i class="fas fa-book"></i> Философы</a></li>
+        <li><a href="Stat.html"><i class="fas fa-newspaper"></i> Статьи</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-ellipsis-h"></i> Ещё...</a>
+          <ul class="dropdown-menu">
+            <li><a href="Scylpture.html">Скульптуры</a></li>
+            <li><a href="science.html">Антология</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider round"></span>
+    </label>
+    
+  </header>
+
+  <main class="main-content">
+    <section class="hero animate-on-scroll">
+      <h1>Ренессанс</h1>
+      <p>Возрождение искусства, науки и культуры в Европе.</p>
+    </section>
+
+    <section class="gallery animate-on-scroll">
+      <h2>Шедевры эпохи Ренессанса</h2>
+      <div class="gallery-grid">
+        <a href="last_supper.html">
+          <img src="gallery/gallery1.jpg" alt="Тайная вечеря">
+        </a>
+        <a href="school_of_athens.html">
+          <img src="gallery/gallery2.jpg" alt="Школа Афин">
+        </a>
+        <a href="mona-lisa.html">
+          <img src="gallery/gallery3.jpg" alt="Мона Лиза">
+        </a>
+      </div>
+    </section>
+
+    <section class="gallery animate-on-scroll">
+      <h2>Искусство XVII века</h2>
+      <div class="gallery-grid">
+        <a href="Italy.html">
+          <img src="gallery/Annibale_Carracci.jpg" alt="Италия">
+        </a>
+        <a href="Spain.html">
+          <img src="gallery/pic.jpg" alt="Италия">
+        </a>
+      </div>
+    </section>
+
+    <section class="quotes-slider animate-on-scroll">
+      <div id="quote-text">"Живопись — это поэзия, которую видят, а не слышат."</div>
+      <div id="quote-author">— Леонардо да Винчи</div>
+      <div class="quote-controls">
+        <button onclick="prevQuote()">←</button>
+        <button onclick="nextQuote()">→</button>
+      </div>
+      <div class="quote-dots" id="quote-dots"></div>
+    </section>
+
+    <section class="statistics animate-on-scroll">
+      <h2>Влияние Ренессанса</h2>
+      <div class="influence-text animate-on-scroll">
+        <p>Эпоха Ренессанса оказала колоссальное влияние на развитие европейской цивилизации.</p>
+        <p>В это время искусство, наука, философия и архитектура пережили невиданный ранее расцвет.</p>
+        <p>Художники стали изображать человека и природу с поразительной реалистичностью, а мыслители поставили в центр внимания разум и личность.</p>
+        <p>Великие мастера, такие как Леонардо да Винчи, Микеланджело и Рафаэль, создавали произведения искусства и закладывали основы научного мышления.</p>
+        <p>Открытия в астрономии, анатомии и инженерии положили начало Новому времени.</p>
+      </div>
+      
+      <div class="statistics-wrapper">
+    
+    <!-- Левая часть — график + кнопки -->
+    <div class="chart-side">
+      <div class="chart-controls">
+        <p>Показать/скрыть категории:</p>
+        <button onclick="toggleCategory(0)">Искусство</button>
+        <button onclick="toggleCategory(1)">Наука</button>
+        <button onclick="toggleCategory(2)">Философия</button>
+        <button onclick="toggleCategory(3)">Архитектура</button>
+        <button onclick="toggleCategory(4)">Литература</button>
+      </div>
+      <canvas id="renaissanceImpactChart"></canvas>
+    </div>
+
+    <!-- Правая часть — текст -->
+    <div class="text-side">
+      <p>Эпоха Ренессанса оказала колоссальное влияние на развитие европейской цивилизации.</p>
+      <p>Искусство стало более реалистичным, наука — систематической, а философия — гуманистической.</p>
+      <p>Каждое направление внесло вклад в пробуждение мышления и творчества.</p>
+    </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Проект о Ренессансе</p>
+  </footer>
+
+  <div id="expandedImgContainer" class="modal" onclick="closeImage()">
+    <div class="modal-content">
+      <span class="close" onclick="closeImage()">×</span>
+      <img id="expandedImg" alt="">
+      <div class="image-description" id="imageDescription">
+        <h3 id="artTitle"></h3>
+        <p id="artDetails"></p>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
